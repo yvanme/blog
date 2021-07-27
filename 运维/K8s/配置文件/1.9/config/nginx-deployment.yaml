@@ -1,0 +1,16 @@
+  apiVersion: apps/v1beta1
+  kind: Deployment                 #类型
+  metadata:                        #源数据
+    name: nginx-deployment
+  spec:
+    replicas: 3                    #副本数<就是部署时有几个实列，启动几个服务>
+    template:                      #对什么进行副本，根据什么区创建副本
+      metadata: 
+        labels:
+          app: nginx
+      spec:                        #说明
+        containers:                #容器
+          - name: nginx            #容器名称
+            image: nginx:1.7.9     #镜像
+            ports:
+              - containerPort: 80  #容器端口
