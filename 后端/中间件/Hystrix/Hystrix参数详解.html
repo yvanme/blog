@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Hystrix参数详解</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.e4d8b86b.css" as="style"><link rel="preload" href="/assets/js/app.fb1232a2.js" as="script"><link rel="preload" href="/assets/js/2.7b8aa595.js" as="script"><link rel="preload" href="/assets/js/17.620c1837.js" as="script"><link rel="prefetch" href="/assets/js/10.3956e9c0.js"><link rel="prefetch" href="/assets/js/100.45907d98.js"><link rel="prefetch" href="/assets/js/101.a1979b5a.js"><link rel="prefetch" href="/assets/js/102.ad62e1ec.js"><link rel="prefetch" href="/assets/js/103.5bc4f2e3.js"><link rel="prefetch" href="/assets/js/104.f0c1d426.js"><link rel="prefetch" href="/assets/js/105.b8acab66.js"><link rel="prefetch" href="/assets/js/106.63abceda.js"><link rel="prefetch" href="/assets/js/107.040f8404.js"><link rel="prefetch" href="/assets/js/108.ce6e7445.js"><link rel="prefetch" href="/assets/js/109.838e9810.js"><link rel="prefetch" href="/assets/js/11.32a5c154.js"><link rel="prefetch" href="/assets/js/110.c4916867.js"><link rel="prefetch" href="/assets/js/111.4ef4ce76.js"><link rel="prefetch" href="/assets/js/112.fc879400.js"><link rel="prefetch" href="/assets/js/113.6d34c3c8.js"><link rel="prefetch" href="/assets/js/114.41fd81aa.js"><link rel="prefetch" href="/assets/js/115.230b4582.js"><link rel="prefetch" href="/assets/js/116.cf904c82.js"><link rel="prefetch" href="/assets/js/117.0bd414ac.js"><link rel="prefetch" href="/assets/js/118.1f2e5268.js"><link rel="prefetch" href="/assets/js/119.93ce1fca.js"><link rel="prefetch" href="/assets/js/12.de3d20c3.js"><link rel="prefetch" href="/assets/js/120.1a20598b.js"><link rel="prefetch" href="/assets/js/121.4a71ce3e.js"><link rel="prefetch" href="/assets/js/122.cc0e457c.js"><link rel="prefetch" href="/assets/js/123.3291326b.js"><link rel="prefetch" href="/assets/js/124.daaeeaf2.js"><link rel="prefetch" href="/assets/js/125.b9c4c654.js"><link rel="prefetch" href="/assets/js/126.d45e23a4.js"><link rel="prefetch" href="/assets/js/127.6f8ed00e.js"><link rel="prefetch" href="/assets/js/128.6269e16a.js"><link rel="prefetch" href="/assets/js/129.ad542cd9.js"><link rel="prefetch" href="/assets/js/13.3b9575bd.js"><link rel="prefetch" href="/assets/js/130.13b86e9c.js"><link rel="prefetch" href="/assets/js/131.3d619705.js"><link rel="prefetch" href="/assets/js/132.db852035.js"><link rel="prefetch" href="/assets/js/133.50e8050a.js"><link rel="prefetch" href="/assets/js/134.6c853199.js"><link rel="prefetch" href="/assets/js/135.5199a333.js"><link rel="prefetch" href="/assets/js/136.a7ea5608.js"><link rel="prefetch" href="/assets/js/137.65a7ac46.js"><link rel="prefetch" href="/assets/js/138.b42f2c59.js"><link rel="prefetch" href="/assets/js/139.dd423465.js"><link rel="prefetch" href="/assets/js/14.93d9a772.js"><link rel="prefetch" href="/assets/js/140.3f4b5066.js"><link rel="prefetch" href="/assets/js/141.123781cc.js"><link rel="prefetch" href="/assets/js/142.dd95d97e.js"><link rel="prefetch" href="/assets/js/143.fdd9587d.js"><link rel="prefetch" href="/assets/js/144.09e19455.js"><link rel="prefetch" href="/assets/js/145.f3d181fe.js"><link rel="prefetch" href="/assets/js/146.d2b11381.js"><link rel="prefetch" href="/assets/js/147.f7616895.js"><link rel="prefetch" href="/assets/js/148.7e86887d.js"><link rel="prefetch" href="/assets/js/149.1a39fccd.js"><link rel="prefetch" href="/assets/js/15.148492d0.js"><link rel="prefetch" href="/assets/js/150.b93bc087.js"><link rel="prefetch" href="/assets/js/151.ba3d0503.js"><link rel="prefetch" href="/assets/js/152.82e9f2f9.js"><link rel="prefetch" href="/assets/js/153.251ab7b1.js"><link rel="prefetch" href="/assets/js/154.c500794f.js"><link rel="prefetch" href="/assets/js/155.53f7b163.js"><link rel="prefetch" href="/assets/js/156.d1cd35c4.js"><link rel="prefetch" href="/assets/js/157.2edb721e.js"><link rel="prefetch" href="/assets/js/158.7e65c935.js"><link rel="prefetch" href="/assets/js/159.c37b9c3e.js"><link rel="prefetch" href="/assets/js/16.00c9741a.js"><link rel="prefetch" href="/assets/js/160.4c05d797.js"><link rel="prefetch" href="/assets/js/161.79955dc4.js"><link rel="prefetch" href="/assets/js/162.8d334156.js"><link rel="prefetch" href="/assets/js/163.599fae50.js"><link rel="prefetch" href="/assets/js/164.686f71b9.js"><link rel="prefetch" href="/assets/js/165.b8a2d10e.js"><link rel="prefetch" href="/assets/js/166.1c4547c2.js"><link rel="prefetch" href="/assets/js/167.7cdb8a0b.js"><link rel="prefetch" href="/assets/js/168.a32aaaf5.js"><link rel="prefetch" href="/assets/js/169.63d00475.js"><link rel="prefetch" href="/assets/js/170.36c1e757.js"><link rel="prefetch" href="/assets/js/171.45f1ab8c.js"><link rel="prefetch" href="/assets/js/172.66de6c52.js"><link rel="prefetch" href="/assets/js/173.cbf880ca.js"><link rel="prefetch" href="/assets/js/174.2401f327.js"><link rel="prefetch" href="/assets/js/175.064fc180.js"><link rel="prefetch" href="/assets/js/176.d18d0ca2.js"><link rel="prefetch" href="/assets/js/177.7b006416.js"><link rel="prefetch" href="/assets/js/178.74c264b7.js"><link rel="prefetch" href="/assets/js/179.1308e968.js"><link rel="prefetch" href="/assets/js/18.3cd79d74.js"><link rel="prefetch" href="/assets/js/180.5ff7154e.js"><link rel="prefetch" href="/assets/js/181.0f518132.js"><link rel="prefetch" href="/assets/js/19.06908f6b.js"><link rel="prefetch" href="/assets/js/20.61b51eb5.js"><link rel="prefetch" href="/assets/js/21.feab52c3.js"><link rel="prefetch" href="/assets/js/22.3a158ad1.js"><link rel="prefetch" href="/assets/js/23.9d5a5381.js"><link rel="prefetch" href="/assets/js/24.6aee6956.js"><link rel="prefetch" href="/assets/js/25.379fdda3.js"><link rel="prefetch" href="/assets/js/26.a0dc095e.js"><link rel="prefetch" href="/assets/js/27.b7eac53d.js"><link rel="prefetch" href="/assets/js/28.9407dd73.js"><link rel="prefetch" href="/assets/js/29.0bce04d8.js"><link rel="prefetch" href="/assets/js/3.9bab7b5b.js"><link rel="prefetch" href="/assets/js/30.491721cd.js"><link rel="prefetch" href="/assets/js/31.97769a88.js"><link rel="prefetch" href="/assets/js/32.bbac853a.js"><link rel="prefetch" href="/assets/js/33.0a598568.js"><link rel="prefetch" href="/assets/js/34.7b0bd00e.js"><link rel="prefetch" href="/assets/js/35.77c6e609.js"><link rel="prefetch" href="/assets/js/36.6a089f7c.js"><link rel="prefetch" href="/assets/js/37.be5e5cee.js"><link rel="prefetch" href="/assets/js/38.17772da1.js"><link rel="prefetch" href="/assets/js/39.7967c09f.js"><link rel="prefetch" href="/assets/js/4.ba3164ba.js"><link rel="prefetch" href="/assets/js/40.0be77dd9.js"><link rel="prefetch" href="/assets/js/41.44eec76e.js"><link rel="prefetch" href="/assets/js/42.a31a2f83.js"><link rel="prefetch" href="/assets/js/43.10bbf2e5.js"><link rel="prefetch" href="/assets/js/44.866c8b9f.js"><link rel="prefetch" href="/assets/js/45.8838049f.js"><link rel="prefetch" href="/assets/js/46.17135848.js"><link rel="prefetch" href="/assets/js/47.eebc0603.js"><link rel="prefetch" href="/assets/js/48.d4621e71.js"><link rel="prefetch" href="/assets/js/49.7561c10b.js"><link rel="prefetch" href="/assets/js/5.75a3592b.js"><link rel="prefetch" href="/assets/js/50.abe160b3.js"><link rel="prefetch" href="/assets/js/51.ea0f774b.js"><link rel="prefetch" href="/assets/js/52.39574502.js"><link rel="prefetch" href="/assets/js/53.cc357b92.js"><link rel="prefetch" href="/assets/js/54.f00e3ef9.js"><link rel="prefetch" href="/assets/js/55.1daf4eac.js"><link rel="prefetch" href="/assets/js/56.6d3f3023.js"><link rel="prefetch" href="/assets/js/57.2ded9a0a.js"><link rel="prefetch" href="/assets/js/58.0c6af46a.js"><link rel="prefetch" href="/assets/js/59.54f2a062.js"><link rel="prefetch" href="/assets/js/6.0377ba0c.js"><link rel="prefetch" href="/assets/js/60.97fd32e4.js"><link rel="prefetch" href="/assets/js/61.e98e89ef.js"><link rel="prefetch" href="/assets/js/62.e3e3b8fe.js"><link rel="prefetch" href="/assets/js/63.0c8bb4c3.js"><link rel="prefetch" href="/assets/js/64.7105ef89.js"><link rel="prefetch" href="/assets/js/65.cf181aa0.js"><link rel="prefetch" href="/assets/js/66.5da64f7b.js"><link rel="prefetch" href="/assets/js/67.44e3ae6e.js"><link rel="prefetch" href="/assets/js/68.8392d4df.js"><link rel="prefetch" href="/assets/js/69.5c27b612.js"><link rel="prefetch" href="/assets/js/7.b533326e.js"><link rel="prefetch" href="/assets/js/70.0d315182.js"><link rel="prefetch" href="/assets/js/71.d9bd06ce.js"><link rel="prefetch" href="/assets/js/72.81b096f4.js"><link rel="prefetch" href="/assets/js/73.f99580df.js"><link rel="prefetch" href="/assets/js/74.11be9ffd.js"><link rel="prefetch" href="/assets/js/75.31a13e5b.js"><link rel="prefetch" href="/assets/js/76.1cad8b67.js"><link rel="prefetch" href="/assets/js/77.95931e9e.js"><link rel="prefetch" href="/assets/js/78.9b76df26.js"><link rel="prefetch" href="/assets/js/79.ddd62d67.js"><link rel="prefetch" href="/assets/js/8.adc8009a.js"><link rel="prefetch" href="/assets/js/80.617e3440.js"><link rel="prefetch" href="/assets/js/81.557a7211.js"><link rel="prefetch" href="/assets/js/82.7f622558.js"><link rel="prefetch" href="/assets/js/83.94b176c9.js"><link rel="prefetch" href="/assets/js/84.79ed3c3b.js"><link rel="prefetch" href="/assets/js/85.46b0b367.js"><link rel="prefetch" href="/assets/js/86.dc0cc4b8.js"><link rel="prefetch" href="/assets/js/87.102663c7.js"><link rel="prefetch" href="/assets/js/88.8152456c.js"><link rel="prefetch" href="/assets/js/89.a132daa9.js"><link rel="prefetch" href="/assets/js/9.01942828.js"><link rel="prefetch" href="/assets/js/90.d320e71a.js"><link rel="prefetch" href="/assets/js/91.02446897.js"><link rel="prefetch" href="/assets/js/92.187a4d7c.js"><link rel="prefetch" href="/assets/js/93.6fb76df5.js"><link rel="prefetch" href="/assets/js/94.b84d2ff0.js"><link rel="prefetch" href="/assets/js/95.147b7ce5.js"><link rel="prefetch" href="/assets/js/96.d2054dbf.js"><link rel="prefetch" href="/assets/js/97.8147f97a.js"><link rel="prefetch" href="/assets/js/98.c6b18cd9.js"><link rel="prefetch" href="/assets/js/99.09bf6d3d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e4d8b86b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="hystrix参数详解"><a href="#hystrix参数详解" class="header-anchor">#</a> Hystrix参数详解</h1> <h2 id="介绍"><a href="#介绍" class="header-anchor">#</a> 介绍</h2> <p>[TOC]</p> <h2 id="hystrix属性优先级"><a href="#hystrix属性优先级" class="header-anchor">#</a> Hystrix属性优先级</h2> <p>1、内置全局默认值（Global default from code），默认值
+如果某属性未通过下面的任何方式进行设置，则默认使用内置全局默认值。</p> <p>2、动态全局默认属性（Dynamic global default property），默认属性
+可以通过此方式来更改某属性的全局默认值。</p> <p>3、内置实例默认值（Instance default from code），实例默认
+可以在写代码的时候，设置某个属性的值。
+例如：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token class-name">HystrixCommandInstance</span><span class="token punctuation">(</span><span class="token keyword">int</span> id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token class-name">Setter</span><span class="token punctuation">.</span><span class="token function">withGroupKey</span><span class="token punctuation">(</span><span class="token class-name">HystrixCommandGroupKey<span class="token punctuation">.</span>Factory</span><span class="token punctuation">.</span><span class="token function">asKey</span><span class="token punctuation">(</span><span class="token string">&quot;ExampleGroup&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">andCommandPropertiesDefaults</span><span class="token punctuation">(</span><span class="token class-name">HystrixCommandProperties<span class="token punctuation">.</span>Setter</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+               <span class="token punctuation">.</span><span class="token function">withExecutionTimeoutInMilliseconds</span><span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>id <span class="token operator">=</span> id<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>4、动态配置实例属性（Dynamic instance property），实例属性
+可以通过动态配置某特定实例的属性值，来覆盖前面三种的值。
+例如下面的属性：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token class-name"><span class="token namespace">hystrix<span class="token punctuation">.</span>command<span class="token punctuation">.</span></span>HystrixCommandKey</span><span class="token punctuation">.</span>execution<span class="token punctuation">.</span>isolation<span class="token punctuation">.</span>thread<span class="token punctuation">.</span>timeoutInMilliseconds
+</code></pre></div><p>可以使用通过 HystrixCommandKey 的名称来替换属性中的HystrixCommandKey，这样就完成了动态配置实例属性，例如：</p> <div class="language- extra-class"><pre class="language-text"><code>hystrix.command.SubscriberGetAccount.execution.isolation.thread.timeoutInMilliseconds
+</code></pre></div><p>上面四种设置属性值的优先级为：4 &gt; 3 &gt; 2 &gt; 1</p> <h2 id="hystrix-参数详解"><a href="#hystrix-参数详解" class="header-anchor">#</a> Hystrix 参数详解</h2> <p>Command Properties</p> <h3 id="一、execution相关的属性"><a href="#一、execution相关的属性" class="header-anchor">#</a> 一、Execution相关的属性</h3> <p>1、execution.isolation.strategy：隔离策略，默认是Thread, 可选Thread｜Semaphore。
+注意：在设置线程隔离策略时，推荐 HystrixCommand 使用 Thread，HystrixObservableCommand 使用 Semaphore。
+默认属性：hystrix.command.default.execution.isolation.strategy
+实例属性：hystrix.command.HystrixCommandKey.execution.isolation.strategy
+例如：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token class-name">HystrixCommandProperties<span class="token punctuation">.</span>Setter</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                                   <span class="token punctuation">.</span><span class="token function">withExecutionIsolationStrategy</span><span class="token punctuation">(</span><span class="token class-name">ExecutionIsolationStrategy</span><span class="token punctuation">.</span>THREAD<span class="token punctuation">)</span>
+</code></pre></div><p>2、execution.timeout.enabled： 执行是否启用超时，默认启用true
+默认属性：hystrix.command.default.execution.timeout.enabled
+实例属性：hystrix.command.HystrixCommandKey.execution.timeout.enabled
+例如：</p> <div class="language- extra-class"><pre class="language-text"><code>HystrixCommandProperties.Setter()
+                                   .withExecutionTimeoutEnabled(boolean value)
+</code></pre></div><p>3、execution.isolation.thread.timeoutInMilliseconds：命令执行超时时间，超过此时间，HystrixCommand被标记为TIMEOUT，并执行回退逻辑，默认1000ms
+注意：超时会作用在HystrixCommand.queue()，即使调用者没有调用 get() 去获得 Future 对象。
+默认属性：hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds
+实例属性：hystrix.command.HystrixCommandKey.execution.isolation.thread.timeoutInMilliseconds
+例如：</p> <div class="language- extra-class"><pre class="language-text"><code>HystrixCommandProperties.Setter()
+                                  .withExecutionTimeoutInMilliseconds(int value)
+</code></pre></div><p>4、execution.isolation.thread.interruptOnTimeout： 发生超时是否中断，默认true
+默认属性：hystrix.command.default.execution.isolation.thread.interruptOnTimeout
+实例属性：hystrix.command.HystrixCommandKey.execution.isolation.thread.interruptOnTimeout
+例如：</p> <div class="language- extra-class"><pre class="language-text"><code>HystrixCommandProperties.Setter()
+                                .withExecutionIsolationThreadInterruptOnTimeout(boolean value)
+</code></pre></div><p>5、execution.isolation.thread.interruptOnCancel： 执行取消运行是否中断，默认false
+默认属性：hystrix.command.default.execution.isolation.thread.interruptOnCancel
+实例属性：hystrix.command.HystrixCommandKey.execution.isolation.thread.interruptOnCancel
+例如：</p> <div class="language- extra-class"><pre class="language-text"><code>HystrixCommandProperties.Setter()
+                                  .withExecutionIsolationThreadInterruptOnCancel(boolean value)
+</code></pre></div><p>6、execution.isolation.semaphore.maxConcurrentRequests： 最大并发请求数，默认10，该参数当使用ExecutionIsolationStrategy.SEMAPHORE策略时才有效。如果达到最大并发请求数，请求会被拒绝。理论上选择semaphore size的原则和选择thread size一致，但选用semaphore时每次执行的单元要比较小且执行速度快（ms级别），否则的话应该用thread。
+semaphore应该占整个容器（tomcat）的线程池的一小部分。
+默认属性：hystrix.command.default.execution.isolation.semaphore.maxConcurrentRequests
+实例属性：hystrix.command.HystrixCommandKey.execution.isolation.semaphore.maxConcurrentRequests
+例如：</p> <div class="language- extra-class"><pre class="language-text"><code>HystrixCommandProperties.Setter()
+                          .withExecutionIsolationSemaphoreMaxConcurrentRequests(int value)
+</code></pre></div><h3 id="二、fallback相关的属性"><a href="#二、fallback相关的属性" class="header-anchor">#</a> 二、Fallback相关的属性</h3> <p>这些参数可以应用于Hystrix的THREAD和SEMAPHORE策略</p> <p>1、fallback.enabled： 当执行失败或者请求被拒绝，是否会尝试调用hystrixCommand.getFallback() 。默认true
+默认属性：hystrix.command.default.fallback.enabled
+实例属性：hystrix.command.HystrixCommandKey.fallback.enabled
+例如：</p> <div class="language- extra-class"><pre class="language-text"><code>HystrixCommandProperties.Setter()
+                         .withFallbackEnabled(boolean value)
+</code></pre></div><p>2、fallback.isolation.semaphore.maxConcurrentRequests： 如果并发数达到该设置值，请求会被拒绝和抛出异常并且fallback不会被调用。默认10
+默认属性：hystrix.command.default.fallback.isolation.semaphore.maxConcurrentRequests
+实例属性：hystrix.command.HystrixCommandKey.fallback.isolation.semaphore.maxConcurrentRequests
+例如：</p> <div class="language- extra-class"><pre class="language-text"><code>HystrixCommandProperties.Setter()
+                   .withFallbackIsolationSemaphoreMaxConcurrentRequests(int value)
+</code></pre></div><h3 id="三、circuit-breaker相关的属性"><a href="#三、circuit-breaker相关的属性" class="header-anchor">#</a> 三、Circuit Breaker相关的属性</h3> <p>1、circuitBreaker.enabled： 用来跟踪circuit的健康性，如果未达标则让request短路。默认true
+默认属性：hystrix.command.default.circuitBreaker.enabled
+实例属性：hystrix.command.HystrixCommandKey.circuitBreaker.enabled
+例如：</p> <div class="language- extra-class"><pre class="language-text"><code>HystrixCommandProperties.Setter()
+                         .withCircuitBreakerEnabled(boolean value)
+</code></pre></div><p>2、circuitBreaker.requestVolumeThreshold： 一个rolling window内最小的请求数。如果设为20，那么当一个rolling window的时间内（比如说1个rolling window是10秒）收到19个请求，即使19个请求都失败，也不会触发circuit break。默认20
+默认属性：hystrix.command.default.circuitBreaker.requestVolumeThreshold
+实例属性：hystrix.command.HystrixCommandKey.circuitBreaker.requestVolumeThreshold
+例如：</p> <div class="language- extra-class"><pre class="language-text"><code>HystrixCommandProperties.Setter()
+                        .withCircuitBreakerRequestVolumeThreshold(int value)
+</code></pre></div><p>3、circuitBreaker.sleepWindowInMilliseconds： 触发短路的时间值，当该值设为5000时，则当触发circuit break后的5000毫秒内都会拒绝request，也就是5000毫秒后才会关闭circuit。默认5000
+默认属性：hystrix.command.default.circuitBreaker.sleepWindowInMilliseconds
+实例属性：hystrix.command.HystrixCommandKey.circuitBreaker.sleepWindowInMilliseconds
+例如：</p> <div class="language- extra-class"><pre class="language-text"><code>HystrixCommandProperties.Setter()
+                            .withCircuitBreakerSleepWindowInMilliseconds(int value)
+</code></pre></div><p>4、circuitBreaker.errorThresholdPercentage：错误比率阀值，如果错误率&gt;=该值，circuit会被打开，并短路所有请求触发fallback。默认50
+默认属性：hystrix.command.default.circuitBreaker.errorThresholdPercentage
+实例属性：hystrix.command.HystrixCommandKey.circuitBreaker.errorThresholdPercentage
+例如：</p> <div class="language- extra-class"><pre class="language-text"><code>HystrixCommandProperties.Setter()
+                            .withCircuitBreakerErrorThresholdPercentage(int value)
+</code></pre></div><p>5、circuitBreaker.forceOpen： 强制打开熔断器，如果打开这个开关，那么拒绝所有request，默认false
+该属性优先级比circuitBreaker.forceClosed高。
+默认属性：hystrix.command.default.circuitBreaker.forceOpen
+实例属性：hystrix.command.HystrixCommandKey.circuitBreaker.forceOpen
+例如：</p> <div class="language- extra-class"><pre class="language-text"><code>HystrixCommandProperties.Setter()
+                            .withCircuitBreakerForceOpen(boolean value)
+</code></pre></div><p>6、circuitBreaker.forceClosed： 强制关闭熔断器 如果这个开关打开，circuit将一直关闭且忽略circuitBreaker.errorThresholdPercentage
+默认属性：hystrix.command.default.circuitBreaker.forceClosed
+实例属性：hystrix.command.HystrixCommandKey.circuitBreaker.forceClosed
+例如：</p> <div class="language- extra-class"><pre class="language-text"><code>HystrixCommandProperties.Setter()
+                            .withCircuitBreakerForceClosed(boolean value)
+</code></pre></div><h3 id="四、metrics相关参数"><a href="#四、metrics相关参数" class="header-anchor">#</a> 四、Metrics相关参数</h3> <p>1、metrics.rollingStats.timeInMilliseconds： 设置统计的时间窗口值的毫秒值，circuit break 的打开会根据1个rolling window的统计来计算。若rolling window被设为10000毫秒，则rolling window会被分成n个buckets，每个bucket包含success，failure，timeout，rejection的次数的统计信息。默认10000。</p> <p>默认属性：hystrix.command.default.metrics.rollingStats.timeInMilliseconds
+实例属性：hystrix.command.HystrixCommandKey.metrics.rollingStats.timeInMilliseconds
+例如：</p> <div class="language- extra-class"><pre class="language-text"><code>HystrixCommandProperties.Setter()
+                       .withMetricsRollingStatisticalWindowInMilliseconds(int value)
+</code></pre></div><p>2、metrics.rollingStats.numBuckets： 设置一个rolling window被划分的数量，若numBuckets＝10，rolling window＝10000，那么一个bucket的时间即1秒。必须符合rolling window % numberBuckets == 0，否则会抛出异常。默认10
+默认属性：hystrix.command.default.metrics.rollingStats.numBuckets
+实例属性：hystrix.command.HystrixCommandKey.metrics.rollingStats.numBuckets
+例如：</p> <div class="language- extra-class"><pre class="language-text"><code>HystrixCommandProperties.Setter()
+                              .withMetricsRollingStatisticalWindowBuckets(int value)
+</code></pre></div><p>3、metrics.rollingPercentile.enabled： 执行时是否enable指标的计算和跟踪，默认true
+默认属性：hystrix.command.default.metrics.rollingPercentile.enabled
+实例属性：hystrix.command.HystrixCommandKey.metrics.rollingPercentile.enabled
+例如：</p> <div class="language- extra-class"><pre class="language-text"><code>HystrixCommandProperties.Setter()
+                               .withMetricsRollingPercentileEnabled(boolean value)
+</code></pre></div><p>4、metrics.rollingPercentile.timeInMilliseconds： 设置rolling percentile window的时间，默认60000
+默认属性：hystrix.command.default.metrics.rollingPercentile.timeInMilliseconds
+实例属性：hystrix.command.HystrixCommandKey.metrics.rollingPercentile.timeInMilliseconds
+例如：</p> <div class="language- extra-class"><pre class="language-text"><code>HystrixCommandProperties.Setter()
+                        .withMetricsRollingPercentileWindowInMilliseconds(int value)
+</code></pre></div><p>5、metrics.rollingPercentile.numBuckets： 设置rolling percentile window的numberBuckets。逻辑同上。默认6
+默认属性：hystrix.command.default.metrics.rollingPercentile.numBuckets
+实例属性：hystrix.command.HystrixCommandKey.metrics.rollingPercentile.numBuckets
+例如：</p> <div class="language- extra-class"><pre class="language-text"><code>HystrixCommandProperties.Setter()
+                              .withMetricsRollingPercentileWindowBuckets(int value)
+</code></pre></div><p>6、metrics.rollingPercentile.bucketSize： 如果bucket size＝100，window＝10s，若这10s里有500次执行，只有最后100次执行会被统计到bucket里去。增加该值会增加内存开销以及排序的开销。默认100
+默认属性：hystrix.command.default.metrics.rollingPercentile.bucketSize
+实例属性：hystrix.command.HystrixCommandKey.metrics.rollingPercentile.bucketSize
+例如：</p> <div class="language- extra-class"><pre class="language-text"><code>HystrixCommandProperties.Setter()
+                                      .withMetricsRollingPercentileBucketSize(int value)
+</code></pre></div><p>7、metrics.healthSnapshot.intervalInMilliseconds： 记录health 快照（用来统计成功和错误绿）的间隔，默认500ms
+默认属性：hystrix.command.default.metrics.healthSnapshot.intervalInMilliseconds
+实例属性：hystrix.command.HystrixCommandKey.metrics.healthSnapshot.intervalInMilliseconds
+例如：</p> <div class="language- extra-class"><pre class="language-text"><code>HystrixCommandProperties.Setter()
+                            .withMetricsHealthSnapshotIntervalInMilliseconds(int value)
+</code></pre></div><h3 id="五、request-context-相关参数"><a href="#五、request-context-相关参数" class="header-anchor">#</a> 五、Request Context 相关参数</h3> <p>1、requestCache.enabled：默认true，需要重载getCacheKey()，返回null时不缓存
+默认属性：hystrix.command.default.requestCache.enabled
+实例属性：hystrix.command.HystrixCommandKey.requestCache.enabled
+例如：</p> <div class="language- extra-class"><pre class="language-text"><code>HystrixCommandProperties.Setter()
+                         .withRequestCacheEnabled(boolean value)
+</code></pre></div><p>2、requestLog.enabled：记录日志到HystrixRequestLog，默认true
+默认属性：hystrix.command.default.requestLog.enabled
+实例属性：hystrix.command.HystrixCommandKey.requestLog.enabled
+例如：</p> <div class="language- extra-class"><pre class="language-text"><code>HystrixCommandProperties.Setter()
+                              .withRequestLogEnabled(boolean value)
+</code></pre></div><h3 id="六、collapser-properties-相关参数"><a href="#六、collapser-properties-相关参数" class="header-anchor">#</a> 六、Collapser Properties 相关参数</h3> <p>1、requestCache.enabled： 设置请求缓存是否对HystrixCollapser.execute() and HystrixCollapser.queue()的调用起作用。，默认true
+默认属性：hystrix.collapser.default.requestCache.enabled
+实例属性：hystrix.collapser.HystrixCollapserKey.requestCache.enabled
+例如：</p> <div class="language- extra-class"><pre class="language-text"><code>HystrixCollapserProperties.Setter()
+                      .withRequestCacheEnabled(boolean value)
+</code></pre></div><p>2、maxRequestsInBatch： 单次批处理的最大请求数，达到该数量触发批处理，默认Integer.MAX_VALUE
+默认属性：hystrix.collapser.default.maxRequestsInBatch
+实例属性：hystrix.collapser.HystrixCollapserKey.maxRequestsInBatch
+例如：</p> <div class="language- extra-class"><pre class="language-text"><code>HystrixCollapserProperties.Setter()
+                    .withMaxRequestsInBatch(int value)
+</code></pre></div><p>3、timerDelayInMilliseconds： 触发批处理的延迟，也可以为创建批处理的时间＋该值，默认10
+默认属性：hystrix.collapser.default.timerDelayInMilliseconds
+实例属性：hystrix.collapser.HystrixCollapserKey.timerDelayInMilliseconds
+例如：</p> <div class="language- extra-class"><pre class="language-text"><code>HystrixCollapserProperties.Setter()
+                     .withTimerDelayInMilliseconds(int value)
+</code></pre></div><p>ThreadPool Properties
+线程数默认值10适用于大部分情况（有时可以设置得更小），如果需要设置得更大，那有个基本得公式可以follow：
+requests per second at peak when healthy × 99th percentile latency in seconds + some breathing room
+每秒最大支撑的请求数 × 99%平均响应时间 + 缓存值
+比如：每秒能处理1000个请求，99%的请求响应时间是60ms，那么公式是：
+1000×0.060 + 12 = 72</p> <p>基本得原则是保持线程池尽可能小，他主要是为了释放压力，防止资源被阻塞。
+当一切都是正常的时候，线程池一般仅会有1到2个线程激活来提供服务</p> <p>1、coreSize： 设置核心线程池大小，默认10
+默认属性：hystrix.threadpool.default.coreSize
+实例属性：hystrix.threadpool.HystrixThreadPoolKey.coreSize
+例如：</p> <div class="language- extra-class"><pre class="language-text"><code>HystrixThreadPoolProperties.Setter()
+                               .withCoreSize(int value)
+</code></pre></div><p>2、maximumSize：设置线程池最大值。这个是在不开启拒绝HystrixCommand的情况下支持的最大并发数。这个属性起作用的前提是设置了allowMaximumSizeToDrivergeFromCoreSize。
+默认属性：hystrix.threadpool.default.maximumSize
+实例属性：hystrix.threadpool.HystrixThreadPoolKey.maximumSize
+例如：</p> <div class="language- extra-class"><pre class="language-text"><code>HystrixThreadPoolProperties.Setter()
+                                .withMaximumSize(int value)
+</code></pre></div><p>3、maxQueueSize： BlockingQueue的最大队列数，当设为－1，会使用SynchronousQueue，值为正时使用LinkedBlcokingQueue。该设置只会在初始化时有效，之后不能修改threadpool的queue size，除非reinitialising thread executor。默认－1。
+默认属性：hystrix.threadpool.default.maxQueueSize
+实例属性：hystrix.threadpool.HystrixThreadPoolKey.maxQueueSize
+例如：</p> <div class="language- extra-class"><pre class="language-text"><code>HystrixThreadPoolProperties.Setter()
+                             .withMaxQueueSize(int value)
+</code></pre></div><p>4、queueSizeRejectionThreshold： 即使maxQueueSize没有达到，达到queueSizeRejectionThreshold该值后，请求也会被拒绝。因为maxQueueSize不能被动态修改，这个参数将允许我们动态设置该值。if maxQueueSize == -1，该字段将不起作用。默认5
+默认属性：hystrix.threadpool.default.queueSizeRejectionThreshold
+实例属性：hystrix.threadpool.HystrixThreadPoolKey.queueSizeRejectionThreshold
+例如：</p> <div class="language- extra-class"><pre class="language-text"><code>HystrixThreadPoolProperties.Setter()
+                           .withQueueSizeRejectionThreshold(int value)
+</code></pre></div><p>5、keepAliveTimeMinutes： 如果corePoolSize和maxPoolSize设成一样（默认实现）该设置无效。如果coreSize小于maximumSize，那么该属性控制一个线程从实用完成到被释放的时间。默认1（分钟）。
+默认属性：hystrix.threadpool.default.keepAliveTimeMinutes
+实例属性：hystrix.threadpool.HystrixThreadPoolKey.keepAliveTimeMinutes
+例如：</p> <div class="language- extra-class"><pre class="language-text"><code>HystrixThreadPoolProperties.Setter()
+                         .withKeepAliveTimeMinutes(int value)
+</code></pre></div><p>6、allowMaximumSizeToDivergeFromCoreSize：该属性允许maximumSize起作用。属性值可以等于或者大于coreSize值，设置coreSize小于maximumSize的线程池能够支持maximumSize的并发数，但是会将不活跃的线程返回到系统中去。
+默认属性：hystrix.threadpool.default.allowMaximumSizeToDivergeFromCoreSize
+实例属性：hystrix.threadpool.HystrixThreadPoolKey.allowMaximumSizeToDivergeFromCoreSize
+例如：</p> <div class="language- extra-class"><pre class="language-text"><code>HystrixThreadPoolProperties.Setter()
+                          .withAllowMaximumSizeToDivergeFromCoreSize(boolean value)
+</code></pre></div><p>7、metrics.rollingStats.timeInMilliseconds：设置统计的滚动窗口的时间段大小。该属性是线程池保持指标时间长短。默认值 10000（毫秒）
+默认属性：hystrix.threadpool.default.metrics.rollingStats.timeInMilliseconds
+实例属性：hystrix.threadpool.HystrixThreadPoolKey.metrics.rollingStats.timeInMilliseconds
+例如：</p> <div class="language- extra-class"><pre class="language-text"><code>HystrixThreadPoolProperties.Setter()
+                           .withMetricsRollingStatisticalWindowInMilliseconds(int value)
+</code></pre></div><p>8、metrics.rollingStats.numBuckets：设置滚动的统计窗口被分成的桶（bucket）的数目。默认值 10。
+注意：”metrics.rollingStats.timeInMilliseconds % metrics.rollingStats.numBuckets == 0&quot;必须为true，否则会抛出异常。即任何能被metrics.rollingStats.timeInMilliseconds整除的值。
+默认属性：hystrix.threadpool.default.metrics.rollingStats.numBuckets
+实例属性：hystrix.threadpool.HystrixThreadPoolProperties.metrics.rollingStats.numBuckets
+例如：</p> <div class="language- extra-class"><pre class="language-text"><code>HystrixThreadPoolProperties.Setter()
+                   .withMetricsRollingStatisticalWindowBuckets(int value)
+</code></pre></div><h2 id="参考链接"><a href="#参考链接" class="header-anchor">#</a> 参考链接</h2> <p><a href="https://blog.csdn.net/sun_qiangwei/article/details/80376791" target="_blank" rel="noopener noreferrer">Hystrix 参数详解<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://blog.csdn.net/u013889359/article/details/80118884" target="_blank" rel="noopener noreferrer">hystrix参数详解<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.fb1232a2.js" defer></script><script src="/assets/js/2.7b8aa595.js" defer></script><script src="/assets/js/17.620c1837.js" defer></script>
+  </body>
+</html>

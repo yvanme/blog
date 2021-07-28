@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Ngrok服务器搭建</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.e4d8b86b.css" as="style"><link rel="preload" href="/assets/js/app.fb1232a2.js" as="script"><link rel="preload" href="/assets/js/2.7b8aa595.js" as="script"><link rel="preload" href="/assets/js/76.1cad8b67.js" as="script"><link rel="prefetch" href="/assets/js/10.3956e9c0.js"><link rel="prefetch" href="/assets/js/100.45907d98.js"><link rel="prefetch" href="/assets/js/101.a1979b5a.js"><link rel="prefetch" href="/assets/js/102.ad62e1ec.js"><link rel="prefetch" href="/assets/js/103.5bc4f2e3.js"><link rel="prefetch" href="/assets/js/104.f0c1d426.js"><link rel="prefetch" href="/assets/js/105.b8acab66.js"><link rel="prefetch" href="/assets/js/106.63abceda.js"><link rel="prefetch" href="/assets/js/107.040f8404.js"><link rel="prefetch" href="/assets/js/108.ce6e7445.js"><link rel="prefetch" href="/assets/js/109.838e9810.js"><link rel="prefetch" href="/assets/js/11.32a5c154.js"><link rel="prefetch" href="/assets/js/110.c4916867.js"><link rel="prefetch" href="/assets/js/111.4ef4ce76.js"><link rel="prefetch" href="/assets/js/112.fc879400.js"><link rel="prefetch" href="/assets/js/113.6d34c3c8.js"><link rel="prefetch" href="/assets/js/114.41fd81aa.js"><link rel="prefetch" href="/assets/js/115.230b4582.js"><link rel="prefetch" href="/assets/js/116.cf904c82.js"><link rel="prefetch" href="/assets/js/117.0bd414ac.js"><link rel="prefetch" href="/assets/js/118.1f2e5268.js"><link rel="prefetch" href="/assets/js/119.93ce1fca.js"><link rel="prefetch" href="/assets/js/12.de3d20c3.js"><link rel="prefetch" href="/assets/js/120.1a20598b.js"><link rel="prefetch" href="/assets/js/121.4a71ce3e.js"><link rel="prefetch" href="/assets/js/122.cc0e457c.js"><link rel="prefetch" href="/assets/js/123.3291326b.js"><link rel="prefetch" href="/assets/js/124.daaeeaf2.js"><link rel="prefetch" href="/assets/js/125.b9c4c654.js"><link rel="prefetch" href="/assets/js/126.d45e23a4.js"><link rel="prefetch" href="/assets/js/127.6f8ed00e.js"><link rel="prefetch" href="/assets/js/128.6269e16a.js"><link rel="prefetch" href="/assets/js/129.ad542cd9.js"><link rel="prefetch" href="/assets/js/13.3b9575bd.js"><link rel="prefetch" href="/assets/js/130.13b86e9c.js"><link rel="prefetch" href="/assets/js/131.3d619705.js"><link rel="prefetch" href="/assets/js/132.db852035.js"><link rel="prefetch" href="/assets/js/133.50e8050a.js"><link rel="prefetch" href="/assets/js/134.6c853199.js"><link rel="prefetch" href="/assets/js/135.5199a333.js"><link rel="prefetch" href="/assets/js/136.a7ea5608.js"><link rel="prefetch" href="/assets/js/137.65a7ac46.js"><link rel="prefetch" href="/assets/js/138.b42f2c59.js"><link rel="prefetch" href="/assets/js/139.dd423465.js"><link rel="prefetch" href="/assets/js/14.93d9a772.js"><link rel="prefetch" href="/assets/js/140.3f4b5066.js"><link rel="prefetch" href="/assets/js/141.123781cc.js"><link rel="prefetch" href="/assets/js/142.dd95d97e.js"><link rel="prefetch" href="/assets/js/143.fdd9587d.js"><link rel="prefetch" href="/assets/js/144.09e19455.js"><link rel="prefetch" href="/assets/js/145.f3d181fe.js"><link rel="prefetch" href="/assets/js/146.d2b11381.js"><link rel="prefetch" href="/assets/js/147.f7616895.js"><link rel="prefetch" href="/assets/js/148.7e86887d.js"><link rel="prefetch" href="/assets/js/149.1a39fccd.js"><link rel="prefetch" href="/assets/js/15.148492d0.js"><link rel="prefetch" href="/assets/js/150.b93bc087.js"><link rel="prefetch" href="/assets/js/151.ba3d0503.js"><link rel="prefetch" href="/assets/js/152.82e9f2f9.js"><link rel="prefetch" href="/assets/js/153.251ab7b1.js"><link rel="prefetch" href="/assets/js/154.c500794f.js"><link rel="prefetch" href="/assets/js/155.53f7b163.js"><link rel="prefetch" href="/assets/js/156.d1cd35c4.js"><link rel="prefetch" href="/assets/js/157.2edb721e.js"><link rel="prefetch" href="/assets/js/158.7e65c935.js"><link rel="prefetch" href="/assets/js/159.c37b9c3e.js"><link rel="prefetch" href="/assets/js/16.00c9741a.js"><link rel="prefetch" href="/assets/js/160.4c05d797.js"><link rel="prefetch" href="/assets/js/161.79955dc4.js"><link rel="prefetch" href="/assets/js/162.8d334156.js"><link rel="prefetch" href="/assets/js/163.599fae50.js"><link rel="prefetch" href="/assets/js/164.686f71b9.js"><link rel="prefetch" href="/assets/js/165.b8a2d10e.js"><link rel="prefetch" href="/assets/js/166.1c4547c2.js"><link rel="prefetch" href="/assets/js/167.7cdb8a0b.js"><link rel="prefetch" href="/assets/js/168.a32aaaf5.js"><link rel="prefetch" href="/assets/js/169.63d00475.js"><link rel="prefetch" href="/assets/js/17.620c1837.js"><link rel="prefetch" href="/assets/js/170.36c1e757.js"><link rel="prefetch" href="/assets/js/171.45f1ab8c.js"><link rel="prefetch" href="/assets/js/172.66de6c52.js"><link rel="prefetch" href="/assets/js/173.cbf880ca.js"><link rel="prefetch" href="/assets/js/174.2401f327.js"><link rel="prefetch" href="/assets/js/175.064fc180.js"><link rel="prefetch" href="/assets/js/176.d18d0ca2.js"><link rel="prefetch" href="/assets/js/177.7b006416.js"><link rel="prefetch" href="/assets/js/178.74c264b7.js"><link rel="prefetch" href="/assets/js/179.1308e968.js"><link rel="prefetch" href="/assets/js/18.3cd79d74.js"><link rel="prefetch" href="/assets/js/180.5ff7154e.js"><link rel="prefetch" href="/assets/js/181.0f518132.js"><link rel="prefetch" href="/assets/js/19.06908f6b.js"><link rel="prefetch" href="/assets/js/20.61b51eb5.js"><link rel="prefetch" href="/assets/js/21.feab52c3.js"><link rel="prefetch" href="/assets/js/22.3a158ad1.js"><link rel="prefetch" href="/assets/js/23.9d5a5381.js"><link rel="prefetch" href="/assets/js/24.6aee6956.js"><link rel="prefetch" href="/assets/js/25.379fdda3.js"><link rel="prefetch" href="/assets/js/26.a0dc095e.js"><link rel="prefetch" href="/assets/js/27.b7eac53d.js"><link rel="prefetch" href="/assets/js/28.9407dd73.js"><link rel="prefetch" href="/assets/js/29.0bce04d8.js"><link rel="prefetch" href="/assets/js/3.9bab7b5b.js"><link rel="prefetch" href="/assets/js/30.491721cd.js"><link rel="prefetch" href="/assets/js/31.97769a88.js"><link rel="prefetch" href="/assets/js/32.bbac853a.js"><link rel="prefetch" href="/assets/js/33.0a598568.js"><link rel="prefetch" href="/assets/js/34.7b0bd00e.js"><link rel="prefetch" href="/assets/js/35.77c6e609.js"><link rel="prefetch" href="/assets/js/36.6a089f7c.js"><link rel="prefetch" href="/assets/js/37.be5e5cee.js"><link rel="prefetch" href="/assets/js/38.17772da1.js"><link rel="prefetch" href="/assets/js/39.7967c09f.js"><link rel="prefetch" href="/assets/js/4.ba3164ba.js"><link rel="prefetch" href="/assets/js/40.0be77dd9.js"><link rel="prefetch" href="/assets/js/41.44eec76e.js"><link rel="prefetch" href="/assets/js/42.a31a2f83.js"><link rel="prefetch" href="/assets/js/43.10bbf2e5.js"><link rel="prefetch" href="/assets/js/44.866c8b9f.js"><link rel="prefetch" href="/assets/js/45.8838049f.js"><link rel="prefetch" href="/assets/js/46.17135848.js"><link rel="prefetch" href="/assets/js/47.eebc0603.js"><link rel="prefetch" href="/assets/js/48.d4621e71.js"><link rel="prefetch" href="/assets/js/49.7561c10b.js"><link rel="prefetch" href="/assets/js/5.75a3592b.js"><link rel="prefetch" href="/assets/js/50.abe160b3.js"><link rel="prefetch" href="/assets/js/51.ea0f774b.js"><link rel="prefetch" href="/assets/js/52.39574502.js"><link rel="prefetch" href="/assets/js/53.cc357b92.js"><link rel="prefetch" href="/assets/js/54.f00e3ef9.js"><link rel="prefetch" href="/assets/js/55.1daf4eac.js"><link rel="prefetch" href="/assets/js/56.6d3f3023.js"><link rel="prefetch" href="/assets/js/57.2ded9a0a.js"><link rel="prefetch" href="/assets/js/58.0c6af46a.js"><link rel="prefetch" href="/assets/js/59.54f2a062.js"><link rel="prefetch" href="/assets/js/6.0377ba0c.js"><link rel="prefetch" href="/assets/js/60.97fd32e4.js"><link rel="prefetch" href="/assets/js/61.e98e89ef.js"><link rel="prefetch" href="/assets/js/62.e3e3b8fe.js"><link rel="prefetch" href="/assets/js/63.0c8bb4c3.js"><link rel="prefetch" href="/assets/js/64.7105ef89.js"><link rel="prefetch" href="/assets/js/65.cf181aa0.js"><link rel="prefetch" href="/assets/js/66.5da64f7b.js"><link rel="prefetch" href="/assets/js/67.44e3ae6e.js"><link rel="prefetch" href="/assets/js/68.8392d4df.js"><link rel="prefetch" href="/assets/js/69.5c27b612.js"><link rel="prefetch" href="/assets/js/7.b533326e.js"><link rel="prefetch" href="/assets/js/70.0d315182.js"><link rel="prefetch" href="/assets/js/71.d9bd06ce.js"><link rel="prefetch" href="/assets/js/72.81b096f4.js"><link rel="prefetch" href="/assets/js/73.f99580df.js"><link rel="prefetch" href="/assets/js/74.11be9ffd.js"><link rel="prefetch" href="/assets/js/75.31a13e5b.js"><link rel="prefetch" href="/assets/js/77.95931e9e.js"><link rel="prefetch" href="/assets/js/78.9b76df26.js"><link rel="prefetch" href="/assets/js/79.ddd62d67.js"><link rel="prefetch" href="/assets/js/8.adc8009a.js"><link rel="prefetch" href="/assets/js/80.617e3440.js"><link rel="prefetch" href="/assets/js/81.557a7211.js"><link rel="prefetch" href="/assets/js/82.7f622558.js"><link rel="prefetch" href="/assets/js/83.94b176c9.js"><link rel="prefetch" href="/assets/js/84.79ed3c3b.js"><link rel="prefetch" href="/assets/js/85.46b0b367.js"><link rel="prefetch" href="/assets/js/86.dc0cc4b8.js"><link rel="prefetch" href="/assets/js/87.102663c7.js"><link rel="prefetch" href="/assets/js/88.8152456c.js"><link rel="prefetch" href="/assets/js/89.a132daa9.js"><link rel="prefetch" href="/assets/js/9.01942828.js"><link rel="prefetch" href="/assets/js/90.d320e71a.js"><link rel="prefetch" href="/assets/js/91.02446897.js"><link rel="prefetch" href="/assets/js/92.187a4d7c.js"><link rel="prefetch" href="/assets/js/93.6fb76df5.js"><link rel="prefetch" href="/assets/js/94.b84d2ff0.js"><link rel="prefetch" href="/assets/js/95.147b7ce5.js"><link rel="prefetch" href="/assets/js/96.d2054dbf.js"><link rel="prefetch" href="/assets/js/97.8147f97a.js"><link rel="prefetch" href="/assets/js/98.c6b18cd9.js"><link rel="prefetch" href="/assets/js/99.09bf6d3d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e4d8b86b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="ngrok服务器搭建"><a href="#ngrok服务器搭建" class="header-anchor">#</a> Ngrok服务器搭建</h1> <h5 id="前言"><a href="#前言" class="header-anchor">#</a> 前言：</h5> <p>简单说一下什么是ngrok:</p> <p>ngrok是一个内网穿透的解决方案,它使得你本地的服务器可以被局域网外的公网访问到
+ngork有服务端和客户端，服务端运行在公网服务器，客户端运行在本地服务器
+ngrok服务端会建立http和https服务，默认端口80/443，以及供ngrok客户端连接的服务，默认端口4443</p> <p>它的工作流程如下：</p> <p>访问端输入域名-&gt;DNS-&gt;ngrok服务端-&gt;请求映射到ngrok客户端-&gt;客户端返回响应到ngrok服务端-&gt;ngrok服务端返回响应到访问端</p> <h6 id="本文环境"><a href="#本文环境" class="header-anchor">#</a> 本文环境：</h6> <p>centos7 64位</p> <p>go1.12.5</p> <h6 id="准备工作"><a href="#准备工作" class="header-anchor">#</a> 准备工作：</h6> <ol><li>一台公网服务器</li> <li>一个域名，顶级或二级均可</li></ol> <p><strong>关于域名：我们声明两个概念：一个是基础域名，可以是顶级或者二级，它用来为ngrok服务端本身提供外部访问（ngrok客户端连接用）。二就是基于基础域名的二级或者三级域名，它用来映射到你的本地服务器，我称它为映射域名。它可以设置多个，这取决于你的需要。例如 *abc.com* 和 *ngrok.abc.com* / *ngrok2.abc.com*，每个映射域名对应一个ngrok客户端</strong></p> <p>假设你的域名是 *<strong>abc.com*</strong> (全文皆使用此假设)</p> <p>如果你需要使用顶级域名作为基础域名，那么请将 *<strong>abc.com*</strong> 泛解析到服务器ip，然后将你需要使用的二级域名通过A记录解析到服务器ip,例如  *<strong>ngrok.abc.com*</strong></p> <p>如果你需要使用二级域名，那么先将你的二级域名 *<strong>xxx.abc.com*</strong> 通过A记录解析到服务器域名。然后将三级域名（比如 *<strong>test.xxx*</strong>）通过CNAME的方式解析到 *<strong>xxx.abc.com*</strong>，这次 *<strong>xxx.abc.com*</strong> 便成为了客户端与服务端的连接域名，*<strong>test.xxx.abc.com*</strong> 则是映射域名</p> <p>下面的教程我们使用 *<strong>abc.com*</strong> 作为基础域名演示，请根据实际替换域名</p> <h6 id="一-安装git和go以及其它依赖"><a href="#一-安装git和go以及其它依赖" class="header-anchor">#</a> 一，安装git和go以及其它依赖</h6> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment">#安装依赖</span>
+yum <span class="token function">install</span> gcc mercurial <span class="token function">git</span> bzr subversion golang
+<span class="token comment">#离线安装go,这里选择1.12.5，安装1.15版本证书会报错</span>
+<span class="token function">wget</span> https://storage.googleapis.com/golang/go1.12.5.linux-amd64.tar.gz
+<span class="token comment">#解压安装包</span>
+<span class="token function">tar</span> -C /root -xzf go1.12.5.linux-amd64.tar.gz
+<span class="token builtin class-name">cd</span> /root<span class="token punctuation">;</span><span class="token function">vim</span> ~/.bashrc
+<span class="token comment">#设置环境变量</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">GOPATH</span><span class="token operator">=</span>/root/Go
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">GOROOT</span><span class="token operator">=</span>/root/go
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token environment constant">$PATH</span><span class="token builtin class-name">:</span><span class="token variable">$GOROOT</span>/bin
+<span class="token comment">#使配置生效</span>
+<span class="token builtin class-name">source</span> ~/.bashrc
+<span class="token comment">#查看go版本</span>
+go version
+</code></pre></div><h6 id="二-下载源码-项目早已停止更新-源码完全固定"><a href="#二-下载源码-项目早已停止更新-源码完全固定" class="header-anchor">#</a> 二，下载源码 （项目早已停止更新，源码完全固定）</h6> <div class="language-php extra-class"><pre class="language-php"><code>git <span class="token keyword">clone</span> https<span class="token punctuation">:</span><span class="token comment">//github.com/inconshreveable/ngrok.git</span>
+</code></pre></div><p>完成后会在当前目录生成ngrok目录</p> <h6 id="三-生成证书-默认的证书是-ngrok-com-我们需要改成-abc-com"><a href="#三-生成证书-默认的证书是-ngrok-com-我们需要改成-abc-com" class="header-anchor">#</a> 三，生成证书（默认的证书是 *<strong>ngrok.com*</strong>，我们需要改成 *<strong>abc.com*</strong>）</h6> <p>生成：</p> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code>cd ngrok  
+
+mkdir cert 
+
+cd cert
+
+export NGROK_DOMAIN<span class="token operator">=</span><span class="token string">&quot;abc.com&quot;</span>
+
+openssl genrsa <span class="token operator">-</span>out rootCA<span class="token punctuation">.</span>key <span class="token number">2048</span>
+
+openssl req <span class="token operator">-</span>x509 <span class="token operator">-</span>new <span class="token operator">-</span>nodes <span class="token operator">-</span>key rootCA<span class="token punctuation">.</span>key <span class="token operator">-</span>subj <span class="token string">&quot;/CN=$NGROK_DOMAIN&quot;</span> <span class="token operator">-</span>days <span class="token number">5000</span> <span class="token operator">-</span>out rootCA<span class="token punctuation">.</span>pem
+
+openssl genrsa <span class="token operator">-</span>out device<span class="token punctuation">.</span>key <span class="token number">2048</span>
+
+openssl req <span class="token operator">-</span>new <span class="token operator">-</span>key device<span class="token punctuation">.</span>key <span class="token operator">-</span>subj <span class="token string">&quot;/CN=$NGROK_DOMAIN&quot;</span> <span class="token operator">-</span>out device<span class="token punctuation">.</span>csr
+
+openssl x509 <span class="token operator">-</span>req <span class="token operator">-</span><span class="token keyword">in</span> device<span class="token punctuation">.</span>csr <span class="token operator">-</span>CA rootCA<span class="token punctuation">.</span>pem <span class="token operator">-</span>CAkey rootCA<span class="token punctuation">.</span>key <span class="token operator">-</span>CAcreateserial <span class="token operator">-</span>out device<span class="token punctuation">.</span>crt <span class="token operator">-</span>days <span class="token number">5000</span>
+</code></pre></div><p>替换(提示overwrite输入y)</p> <div class="language-undefined extra-class"><pre class="language-text"><code>cp rootCA.pem ../assets/client/tls/ngrokroot.crt
+
+cp device.crt ../assets/server/tls/snakeoil.crt
+
+cp device.key ../assets/server/tls/snakeoil.key
+</code></pre></div><h6 id="四-生成服务端与客户端"><a href="#四-生成服务端与客户端" class="header-anchor">#</a> 四：生成服务端与客户端</h6> <p>切换回ngrok目录</p> <p>以下命令按需生成</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token comment">&lt;!--linux服务端/客户端--&gt;</span>
+GOOS=linux GOARCH=386 make release-server (32位)
+GOOS=linux GOARCH=amd64 make release-server（64位）
+
+GOOS=linux GOARCH=386 make release-client (32位)
+GOOS=linux GOARCH=amd64 make release-client（64位）
+
+<span class="token comment">&lt;!--Mac OS服务端/客户端--&gt;</span>
+GOOS=darwin GOARCH=386 make release-server
+GOOS=darwin GOARCH=amd64 make release-server
+
+GOOS=darwin GOARCH=386 make release-client
+GOOS=darwin GOARCH=amd64 make release-client
+
+
+<span class="token comment">&lt;!--windows服务端/客户端--&gt;</span>
+GOOS=windows GOARCH=386 make release-server
+GOOS=windows GOARCH=amd64 make release-server
+
+GOOS=windows GOARCH=386 make release-client
+GOOS=windows GOARCH=amd64 make release-client
+</code></pre></div><p>所有程序都将生成在bin目录中，不同平台将建立不同的子目录</p> <p>（当我生成linux 64位程序时，会直接保存在bin目录下无子目录。所以我个人推测，如果生成是当前系统的程序，则无子目录，直接存放于bin目录下。各位若有条件可验证下）</p> <p>目录中，ngrok是客户端，ngrokd是服务端</p> <div class="language-undefined extra-class"><pre class="language-text"><code>linux
+bin/linux_386
+bin/linux_amd64
+
+mac os 
+bin/darwin_386 
+bin/darwin_amd64 
+
+windows
+bin/windows_386
+bin/windows_amd64
+</code></pre></div><p>启动服务器：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>./bin/ngrokd -domain<span class="token operator">=</span><span class="token string">&quot;<span class="token variable">$NGROK_DOMAIN</span>&quot;</span>
+</code></pre></div><p>其它配置：</p> <p>-httpAddr=&quot;:80&quot;  http服务的访问端口 默认80</p> <p>-httpsAddr=&quot;:443&quot; https服务的访问端口 默认443</p> <p>-tunnelAddr=&quot;:4443&quot; 客户端连接服务端的端口 默认4443</p> <p>以上端口，如若与系统其他服务有冲突，开启服务时请自行配置其他端口，同时记得配置防火墙</p> <h6 id="五-客户端配置与连接"><a href="#五-客户端配置与连接" class="header-anchor">#</a> 五：客户端配置与连接</h6> <p>通过sz或者ftp等方式将ngrok下载到你需要使用客户端的电脑中</p> <p>新建配置文件ngrok.cfg</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token comment">&lt;!--配置服务端连接地址，也就是基础域名。端口则与服务端-tunnelAddr配置相同--&gt;</span>
+server_addr: &quot;abc.com:4443&quot;  
+trust_host_root_certs: false
+</code></pre></div><p>运行客户端</p> <div class="language-undefined extra-class"><pre class="language-text"><code>ngrok -config=ngrok.cfg -subdomain ngrok 80
+</code></pre></div><h6 id="六-配置ngrok服务"><a href="#六-配置ngrok服务" class="header-anchor">#</a> 六：配置NGROK服务</h6> <p>新建配置文件/usr/lib/systemd/system/ngrok.service</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">[</span>Unit<span class="token punctuation">]</span>
+<span class="token assign-left variable">Description</span><span class="token operator">=</span>ngrok
+<span class="token assign-left variable">After</span><span class="token operator">=</span>network.target
+
+<span class="token punctuation">[</span>Service<span class="token punctuation">]</span>
+<span class="token assign-left variable">ExecStart</span><span class="token operator">=</span>/root/ngrok/bin/ngrokd -tlsKey<span class="token operator">=</span>/root/ngrok/cert/device.key -tlsCrt<span class="token operator">=</span>/root/ngrok/cert/device.crt -domain<span class="token operator">=</span>xiaoaixi.com -httpAddr<span class="token operator">=</span>:80 -httpsAddr<span class="token operator">=</span>:443
+
+<span class="token punctuation">[</span>Install<span class="token punctuation">]</span>
+<span class="token assign-left variable">WantedBy</span><span class="token operator">=</span>multi-user.target
+</code></pre></div><p>管理ngrok服务</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment">#使配置生效</span>
+systemctl daemon-reload
+<span class="token comment">#启动服务</span>
+systemctl start ngrok
+<span class="token comment">#查看服务状态</span>
+systemctl status ngrok
+</code></pre></div><h6 id="七-配置ngrok客户端"><a href="#七-配置ngrok客户端" class="header-anchor">#</a> 七：配置NGROK客户端</h6> <p>新建配置文件ngrok.cfg</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">server_addr</span><span class="token punctuation">:</span> <span class="token string">&quot;xiaoaixi.com:4443&quot;</span>
+<span class="token key atrule">trust_host_root_certs</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+<span class="token key atrule">tunnels</span><span class="token punctuation">:</span>
+ <span class="token key atrule">nginx</span><span class="token punctuation">:</span>
+  <span class="token key atrule">subdomain</span><span class="token punctuation">:</span> nginx
+  <span class="token key atrule">proto</span><span class="token punctuation">:</span>
+   <span class="token key atrule">http</span><span class="token punctuation">:</span> <span class="token number">80</span>
+ <span class="token key atrule">about</span><span class="token punctuation">:</span>
+  <span class="token key atrule">subdomain</span><span class="token punctuation">:</span> about
+  <span class="token key atrule">proto</span><span class="token punctuation">:</span>
+   <span class="token key atrule">http</span><span class="token punctuation">:</span> 192.168.0.1<span class="token punctuation">:</span><span class="token number">80</span>
+ <span class="token key atrule">ssh</span><span class="token punctuation">:</span>
+  <span class="token key atrule">remote_port</span><span class="token punctuation">:</span> <span class="token number">2020</span>
+  <span class="token key atrule">proto</span><span class="token punctuation">:</span>
+   <span class="token key atrule">tcp</span><span class="token punctuation">:</span> <span class="token number">22</span>
+</code></pre></div><p>启动客户端</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment">#转发指定服务</span>
+ngrok.exe -config ngrok.cfg -log ngrok.log start nginx
+<span class="token comment">#转发所有服务</span>
+ngrok.exe -config ngrok.cfg -log ngrok.log start-all
+</code></pre></div><p>配置为window服务</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment">#注册服务</span>
+sc create ngrok <span class="token assign-left variable">binPath</span><span class="token operator">=</span> <span class="token string">&quot;cmd.exe /c start C:<span class="token entity" title="\n">\n</span>grok<span class="token entity" title="\n">\n</span>grok.bat&quot;</span> <span class="token assign-left variable">start</span><span class="token operator">=</span> auto <span class="token assign-left variable">displayname</span><span class="token operator">=</span> <span class="token string">&quot;ngrok&quot;</span>
+<span class="token comment">#删除服务</span>
+sc delete ngrok
+
+shell:startup
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.fb1232a2.js" defer></script><script src="/assets/js/2.7b8aa595.js" defer></script><script src="/assets/js/76.1cad8b67.js" defer></script>
+  </body>
+</html>
