@@ -1,8 +1,0 @@
-export http_proxy=http://192.168.31.71:1080/
-export https_proxy=https://192.168.31.71:1080/
-export ftp_proxy=https://192.168.31.71:1080/
-export http_proxy
-export https_proxy
-export ftp_proxy
-
-export ALL_PROXY=socks5://192.168.31.71:1080
